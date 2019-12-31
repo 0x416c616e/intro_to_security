@@ -245,15 +245,18 @@ Keep in mind that numeric overflows are not the same as things like buffer overf
 **Buffer overflow** – when you run a program, your program is allowed to edit its own memory, but not other stuff. A buffer overflow is when you’re able to write more than the length of what your program has, meaning it can then edit the memory of other programs. 
 
 Here’s a very simple demonstration:
+
 Thing1 is yours. You’re allowed to change it. But thing2 is off-limits for you. They are both next to each other in RAM:
  
-
+![buffer overflow image 1](https://github.com/0x416c616e/intro_to_security/blob/master/03_miscellaneous_security/buffer_overflow_1.png)
 
 Then your program decides that it wants to write a value to thing1. But it’s a very long value:
  
-
+![buffer overflow image 2](https://github.com/0x416c616e/intro_to_security/blob/master/03_miscellaneous_security/buffer_overflow_2.png)
 
 Now, both thing1 and thing2 have been changed, even though you’re not supposed to be able to edit thing2’s RAM, because thing2 isn’t yours:
+
+![buffer overflow image 3](https://github.com/0x416c616e/intro_to_security/blob/master/03_miscellaneous_security/buffer_overflow_3.png)
  
 But you were never directly editing thing2. You were just editing thing1 with a very long amount of data, and the end of it spilled over into thing2. That spillover is called an overflow. In the above example, 010 is the overflow. Imagine if thing2 is being run with elevated privileges. If you craft your buffer overflow just right, you can use it to get things like code execution or privilege escalation.
 
