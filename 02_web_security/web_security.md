@@ -38,7 +38,9 @@ For example, if someone makes a comment like this:
 
 It should show up like this:
 
+```
 <h1>this text is big</h1>
+```
 
 But if you didn’t properly sanitize it, it could look like this:
 
@@ -125,6 +127,7 @@ Monitoring makes it easy to see when someone is up to no good, or even for non-s
 Another note about firewalls: there are separate rules for inbound and outbound traffic. Usually, firewalls are extremely strict about unsolicited connections from the outside world. However, they usually let devices from within the firewall make pretty much any type of outbound connection. Inbound is called ingress and outbound is called egress. 
 
 **Ingress**: from the outside world to the web server. Ingress is going in.
+
 **Egress**: from the web server to the outside world. Egress is exiting.
 
 A web server running something like Amazon Linux, CentOS, or Red Hat might have strict ingress and egress firewall rules. However, a home user will only have strict ingress rules, but lax egress ones. But even so, a reverse shell can still be possible on a web server using something like port 80.
@@ -183,7 +186,7 @@ Here are some examples:
 
 ```
 example.com/view.php?file=../../../../../etc/passwd
-``
+```
 In the above example, you get to see a sensitive file on the server.
 
 Here’s another example:
