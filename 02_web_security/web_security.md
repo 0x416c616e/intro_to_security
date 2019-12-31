@@ -412,7 +412,7 @@ To understand escaping, imagine that a user posts this comment on your website:
 <script>alert('XSS');</script>
 If you didn’t escape it, then someone who browses the site would see this:
  
-!(https://github.com/0x416c616e/intro_to_security/blob/master/02_web_security/xss.png)
+![xss](https://github.com/0x416c616e/intro_to_security/blob/master/02_web_security/xss.png)
  
 But if you escaped it, it would look like this in the browser:
 <script>alert('XSS');</script>
