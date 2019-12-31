@@ -309,6 +309,10 @@ Here are some security issues relating to file uploads:
 
 A common thing to do for servers with file upload vulnerabilities is to upload a web shell, such as WSO shell. A shell on a computer, like bash, lets you send commands to the computer so that you can control it. A web shell is the same way, only in a web browser. LAMP servers need to be careful about PHP web shells, of which there are plenty. 
 
+I even wrote my own minimalist web shell, which you can find here:
+
+<https://github.com/0x416c616e/php_web_shell>
+
 **MIME spoofing** – making one file look like it's another type of file. An example of this is a jpg web shell. It looks like an image file to a naively-coded file upload handler, but in reality it's actually a PHP script. MIME stands for Multipurpose Internet Mail Extensions, and basically means file types for the internet.
 
 **File size** – when you accept file uploads, it's going to take up space on your server's storage. If you don't limit file sizes and file upload limits, then people could quickly fill up your storage. This can be an issue for disk space and also bandwidth and performance. For example, a user shouldn't be able to upload a 50MB image for their profile picture, as it would be impractically slow to load and also takes up too much space.
