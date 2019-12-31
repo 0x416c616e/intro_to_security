@@ -426,3 +426,8 @@ It's called junk hacking, because these devices are junk. It’s not very diffic
 Most CVEs have cryptic CVE numbers, which are CVE-Year-Number. But some security researchers want to also be marketers, so they make cool-sounding names, scary-looking logos, and websites to advertise the vulnerability. Some people say that people who do this are doing so because they want to advance their career as a security researcher, and so they want to raise awareness for the vulnerability just to gain notoriety, especially because their website often has a very non-technical explanation of the vulnerability, in order to get as many people as possible to talk about it. But some people think it’s a good thing for people to increase security awareness. 
 
 But regardless of how you feel about name/logo vulnerabilities, the fact of the matter is that there are tons of severe security vulnerabilities that you need to pay attention to that don’t have cool names or logos. Just to put things in perspective, there are only a few vulnerabilities with names and logos. But according to cvedetails.com, there were over new 12,000 CVEs in 2019 alone.
+
+Go to the previous section:
+<https://github.com/0x416c616e/intro_to_security/blob/master/02_web_security/web_security.md>
+
+Go to the next section:
