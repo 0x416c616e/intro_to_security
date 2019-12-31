@@ -635,3 +635,4 @@ Go to the previous section:
 <https://github.com/0x416c616e/intro_to_security/blob/master/01_introduction/introduction.md>
 
 Go to the next section:
+<https://github.com/0x416c616e/intro_to_security/blob/master/03_miscellaneous_security/miscellaneous_security.md>
