@@ -431,3 +431,4 @@ Go to the previous section:
 <https://github.com/0x416c616e/intro_to_security/blob/master/02_web_security/web_security.md>
 
 Go to the next section:
+<https://github.com/0x416c616e/intro_to_security/blob/master/04_tools/tools.md>
