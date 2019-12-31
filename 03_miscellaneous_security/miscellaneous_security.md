@@ -1,7 +1,7 @@
 # Section 3: Miscellaneous Security Concepts
 
 
-## In-band patching vs. out-of-band patching
+**In-band patching vs. out-of-band patching**
 
 Because installing software updates is always important, it’s good to have a schedule. Scheduled maintenance and software updates are called “in band.” Software updates are also called patches, so a routine update is called in-band patching. Microsoft has a consistent schedule of releasing updates on the second Tuesday of the month. They call it “Patch Tuesday.”
 
