@@ -285,7 +285,7 @@ A tool used for DoS attacks is called a booter, because it boots someone or some
 
 **Typosquatting** – over the years, there have been a couple times that I’ve accidentally made a typo when typing in a domain name, such as facebok.com instead of facebook, goggle.com instead of google.com, youtub.com instead of youtube.com, reddit.co instead of reddit.com, and things like that. Typosquatting is when a criminal registers a domain name that is a common typo/misspelling of a real website’s domain name, and then they will get traffic to their site that is intended for another site. From there, they might advertise a scam, deliver a malicious payload, or even have a fake login screen that will steal someone’s login information for the legitimate site.
 
-### Don't use old versions of Apache or PHP**
+### Don't use old versions of Apache or PHP
 
 Older versions of PHP are not secure! That's right: even a programming language can have security vulnerabilities, even if the code you write within it is good! There are smaller changes within PHP 7, such as 7.1, 7.2, 7.3, and so on. But these are smaller differences, compared to the difference between PHP 5.6 and PHP 7. There is no PHP 6. They tried making PHP 6, had some problems, and then cancelled it. PHP 6 had a lot of interesting ideas that were difficult to code, so they made the next version less ambitious, and that’s what PHP 7 is. But although PHP 7 isn’t as ambitious as PHP 6 was going to be, it’s still got a lot of cool new features, and it’s better than PHP 5.
 
@@ -630,3 +630,8 @@ This is not the apple.com you might think it is. It’s a security researcher’
 **Hashing** – all passwords need to be hashed, like if you’re making a full stack web app where people can make accounts, and you’re storing their info in a database. Hashing means that, if someone is able to exfiltrate data from a database, they still can’t do anything with it. Technically, an attacker with exfiltrated password hashes can attempt to crack them, but it can take a while. Hashing might not be perfect, but it’s definitely better than not hashing.
 
 **Watering hole** – if an attacker knows that someone uses a certain website, they can hack it and then put JS-based malware in it, so that the victim will run it in their browser the next time they visit it.
+
+Go to the previous section:
+<https://github.com/0x416c616e/intro_to_security/blob/master/01_introduction/introduction.md>
+
+Go to the next section:

@@ -1,4 +1,4 @@
-# Introduction
+# Section 1: Introduction
 
 If you’re making a website or web app, that means people can connect to it. Anything on the internet, whether it’s a web app or even a mobile app that connects to a server, needs security. Here are some important security concepts to be aware of. 
 
@@ -91,3 +91,6 @@ All it takes is one bad line of code. For example, Apple had an SSL security iss
 
 ## Patching
 When a developer finds out that there is a security issue in their code, they will change their code to fix the issue, and then users can install that fix if they install software updates. A software update is also known as a patch.
+
+Go to the next section: 
+<https://github.com/0x416c616e/intro_to_security/blob/master/02_web_security/web_security.md>
