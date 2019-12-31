@@ -1,7 +1,7 @@
-Miscellaneous Security Concepts
+Section 3: Miscellaneous Security Concepts
 
 
-In-band patching vs. out-of-band patching
+## In-band patching vs. out-of-band patching
 
 Because installing software updates is always important, it’s good to have a schedule. Scheduled maintenance and software updates are called “in band.” Software updates are also called patches, so a routine update is called in-band patching. Microsoft has a consistent schedule of releasing updates on the second Tuesday of the month. They call it “Patch Tuesday.”
 
@@ -11,19 +11,19 @@ However, sometimes there are security issues that are so urgent that you can’t
 
 Some people in IT and security are paid to respond to these kinds of things. Sometimes they are called “ops,” which is short for operations. They might be on something called “pager duty,” which means they have to respond to alerts, whenever they may happen. Of course, this is less important for personal projects and learning, and more about what companies do. Developers don’t usually do this kind of stuff, but with DevOps, the difference between development and operations is blurring. PagerDuty is also the name of a company, which is named after the same concept (on-call operations and incident response). 
 
-Trusting third party code – if you were a hacker, would you go after lots of individuals, or maybe just developers who write software that plenty of people already have installed? Sometimes, it’s not as simple as using a <script> tag on a page. Other times, you have software installed on your server, like a CMS that supports plugins. Wordpress is often customized using plugins, to extend the functionality of the site and also make it feel more unique instead of cookie cutter. But the problem with plugins is that you’re at the mercy of the person who made the plugin. You not only have to trust them to not directly do anything malicious, but you also have to trust that they’re secure enough to not get hacked and have someone else push malicious updates to their plugin. 
+**Trusting third party code** – if you were a hacker, would you go after lots of individuals, or maybe just developers who write software that plenty of people already have installed? Sometimes, it’s not as simple as using a <script> tag on a page. Other times, you have software installed on your server, like a CMS that supports plugins. Wordpress is often customized using plugins, to extend the functionality of the site and also make it feel more unique instead of cookie cutter. But the problem with plugins is that you’re at the mercy of the person who made the plugin. You not only have to trust them to not directly do anything malicious, but you also have to trust that they’re secure enough to not get hacked and have someone else push malicious updates to their plugin. 
 
-Unnecessary services, unnecessary open ports, unnecessary packages installed – if you don’t need it, don’t use it. It might make your server less secure. On a home computer, you can install whatever and not really care. But on a server or work computer, you have to be more careful about what you install, maybe even using a test VM on a test VLAN and using Wireshark to monitor what it’s doing over a network. Even if something isn’t malicious, it could just be another way for you to get hacked. The more stuff you have installed, the greater your attack surface. The greater your attack surface, the more likely you are to have a security incident.
+**Unnecessary services, unnecessary open ports, unnecessary packages installed** – if you don’t need it, don’t use it. It might make your server less secure. On a home computer, you can install whatever and not really care. But on a server or work computer, you have to be more careful about what you install, maybe even using a test VM on a test VLAN and using Wireshark to monitor what it’s doing over a network. Even if something isn’t malicious, it could just be another way for you to get hacked. The more stuff you have installed, the greater your attack surface. The greater your attack surface, the more likely you are to have a security incident.
 
-Security through obscurity – some people think that making something obscure or hidden means it’s secure. For example, iOS is closed source and Apple is very clandestine about how it runs under the hood. However, this is not true security. This is called security through obscurity. Once someone finds out what something is, it’s not obscure anymore, and the illusion of security is gone. Proprietary software can be considered security through obscurity, and another example could be how a professor of mine for an introductory CS class said he thinks it’s more secure to hide login links on websites (which does very little in the grand scheme of things). Not having a link to your login page from the index.html page doesn’t make it more secure. Anyone can easily find it with Dirbuster or just manually guessing where it might be (for example, pretty much all Wordpress sites have a login page at example.com/wp-login.php). Hiding the link to the login page doesn’t make the login page inherently secure, and it’s not that hard to find it, and then test it for various security vulnerabilities.  
+**Security through obscurity** – some people think that making something obscure or hidden means it’s secure. For example, iOS is closed source and Apple is very clandestine about how it runs under the hood. However, this is not true security. This is called security through obscurity. Once someone finds out what something is, it’s not obscure anymore, and the illusion of security is gone. Proprietary software can be considered security through obscurity, and another example could be how a professor of mine for an introductory CS class said he thinks it’s more secure to hide login links on websites (which does very little in the grand scheme of things). Not having a link to your login page from the index.html page doesn’t make it more secure. Anyone can easily find it with Dirbuster or just manually guessing where it might be (for example, pretty much all Wordpress sites have a login page at example.com/wp-login.php). Hiding the link to the login page doesn’t make the login page inherently secure, and it’s not that hard to find it, and then test it for various security vulnerabilities.  
 
 Security through obscurity is not security at all. That being said, don’t confuse security through obscurity with file permissions for sensitive data. Sensitive data should not be publicly exposed. That’s not the same as security through obscurity. 
 
-Account recovery – this is less technical, but if you have an account on a website, and the recovery question is something like “what is the name of your dog?” and you post about your dog on Instagram, that’s not secure. Treat recovery questions like second passwords. It doesn’t matter if you pour a lot of effort into making your server secure, immune to SQL injection, CSRF, XSS, and more, if people make simple mistakes like posting their recovery question answers on social media where anyone can see them.
+**Account recovery** – this is less technical, but if you have an account on a website, and the recovery question is something like “what is the name of your dog?” and you post about your dog on Instagram, that’s not secure. Treat recovery questions like second passwords. It doesn’t matter if you pour a lot of effort into making your server secure, immune to SQL injection, CSRF, XSS, and more, if people make simple mistakes like posting their recovery question answers on social media where anyone can see them.
 
 On that topic, what often happens when someone says an “account was hacked,” such as on social media (“my Facebook was hacked”), it doesn’t mean Facebook’s servers had a compromise. It means the owner of the account had their details leaked personally, such as from falling for a scam, or posting too much personal information publicly that allowed people to recover the account. 
 
-Social engineering – if you are gullible, people will take advantage of you. Many methods of hacking and cybercrime are very low-effort and non-technical. Instead of trying to hack your site directly, a scammer might just call you or email you and try to trick you with their words instead of with code or hacking tools. 
+**Social engineering** – if you are gullible, people will take advantage of you. Many methods of hacking and cybercrime are very low-effort and non-technical. Instead of trying to hack your site directly, a scammer might just call you or email you and try to trick you with their words instead of with code or hacking tools. 
 
 A relative of mine once fell for a scam where someone pretended to be from Microsoft, and they said he had a virus, so he needed to install remote access software to let them fix his computer. For some reason, he completely fell for this and did everything they told him to! Don’t do that. Or even just let your phone go to voicemail and then google the phone number to see if it’s a reported scammer.
 
@@ -33,8 +33,11 @@ Another component of scams is trying to scare you. The prefrontal cortex is the 
 
 Even if you are a tech-savvy software developer, your friends and family might not be as tech-savvy, and as such, they might fall for scams. That’s why it’s important to not necessarily trust links that they send you, because you don’t know if they were the ones who sent it, or if someone who compromised their account sent it.
 
-Banner grabbing – to understand banner grabbing, you must first understand login banners. A login banner is the text banner you see when you try to remotely log in to something, such as with SSH, telnet, and other CLI-based remote login things. 
+**Banner grabbing** – to understand banner grabbing, you must first understand login banners. A login banner is the text banner you see when you try to remotely log in to something, such as with SSH, telnet, and other CLI-based remote login things. 
+
 It might look something like this:
+
+```
 ###############################
 #                             #
 #    Cool Company, Inc        #
@@ -43,81 +46,119 @@ It might look something like this:
 #    is not allowed.          #
 #                             #
 ###############################
+```
 
 A banner might also be called an MOTD or banner MOTD. MOTD stands for Message Of The Day. Sometimes, there are messages that are specific to a certain day, but much of the time, there’s just a login banner that stays the same most of the time. Back when I was taking IT classes (before switching to computer science), we learned about setting up banners for Cisco IOS, which is the operating system that runs on a lot of enterprise routers and switches (not to be confused with home consumer devices, which are different). I remember a professor of mine mentioning that it’s a good idea to have a banner that says that unauthorized access is prohibited, because of some legal reason, otherwise someone might not know that they’re not allowed to try and log into something. I’m not sure if that’s actually true or not, but the point is that many login banners say what it is and that unauthorized access is prohibited. Not that hackers care. Criminals will break the law. But although it’s not much of a deterrent, it does let hackers know about the existence of something that a person can attempt to log in to, sometimes containing information that is useful to an attacker. 
 
 Banner grabbing is the act of using different CLI-based remote login programs to send requests to different servers in an attempt to see what the login banners are. If you see a login banner, that confirms that there is indeed a server at that address, and it can potentially be remotely logged into, even though you don’t have the login information. But it’s a way to enumerate assets, which may or may not be valuable for hacking. And if the banner says any information about what’s running on the server, that can make it easier to figure out how to hack it.
 
-Google dorking – searching for stuff on Google. Many things are made public when they really shouldn’t be. Instead of trying to do port scanning or banner grabbing, you can just google something.
+**Google dorking** – searching for stuff on Google. Many things are made public when they really shouldn’t be. Instead of trying to do port scanning or banner grabbing, you can just google something.
+
 Here are some basics of google dorking:
-inurl: specify something that’s in the url
-filetype: search for only a specific type of file
-intitle: search for text within a title
-intext: search for text within a page
-site: only show results on a certain website
-*: wildcard, meaning any
-"": quotes, meaning exactly matching rather than roughly matching
+
+**inurl:** to specify something that’s in the url
+
+**filetype:** to search for only a specific type of file
+
+**intitle:** to search for text within a title
+
+**intext:** to search for text within a page
+
+**site:** to only show results on a certain website
+
+***:** is wildcard, meaning any
+
+**"":**  to search with exact matching rather than rough matching
+
 Here’s an example of google dorking, for finding spreadsheets hosted in AWS S3 buckets:
+
+```
 site:s3.amazonaws.com filetype:xls
+```
+
 If you search for the above google dorking term, I suggest not actually clicking any of the results, because many of them are files that weren’t intended to be made public. Here’s the thing: people make mistakes all the time. When someone puts something in the cloud, they might accidentally click or type the wrong thing, meaning it will be publicly accessible by anyone even though they meant to make it private. 
+
 Here’s another example of google dorking, for finding file directories:
+
+```
 intitle:"index of" intext:modified
+```
+
 Again, don’t click the links, because these might not be things you’re supposed to see.
+
 Here’s another one I came up with, which lets you find hacked sites that have web shells on them:
+
+```
 filetype:php uname user php hdd cwd
-Don’t click the links. They might either be hacked sites, malware, or honeypots that look like hacked sites. 
+```
+
+Don’t click the links for these kinds of google dorking searches. They might either be hacked sites, malware, or honeypots that look like hacked sites. 
+
 You can use other kinds of google dorks queries to find things like network cameras, login pages, and software that is accidentally made to require no login, even when it should.
 
 Again: do not click the results of google dorks queries. You might get in trouble if you do.
+
 I’m only including this information to prove that people make mistakes, and google can index things that it probably shouldn’t. And keep in mind: if you click on a link on a website, the server owner or administrator can look through logs to see IP addresses of visitors.
 
 That all being said, Shodan is a more effective way to find servers. You can search Shodan for servers based on the software that’s running on them, such as if  you want to find servers that have an old and vulnerable version of software on them. But again, use it with caution.
 
-User awareness – at a company, you need more than secure code. You need educated employees who are conscious of security issues, including scams, phishing, and things like that. 
+**User awareness** – at a company, you need more than secure code. You need educated employees who are conscious of security issues, including scams, phishing, and things like that. 
 
-Copying and pasting untrusted code from the internet – rather than figuring out a coding issue yourself, it’s very easy to just google it and then copy and paste code that someone else wrote, which presumably does what you want to do. But this is not secure. Can you really trust the code written by some random stranger? What if the code is not secure? Maybe the person who wrote it isn’t malicious, but instead just made a mistake. Nobody’s perfect. There are problems with copying code from dubious sources. It’s one thing to copy code from official documentation. For example, it should be okay to use code from the official PHP documentation website: https://www.php.net/docs.php
+**Copying and pasting untrusted code from the internet** – rather than figuring out a coding issue yourself, it’s very easy to just google it and then copy and paste code that someone else wrote, which presumably does what you want to do. But this is not secure. Can you really trust the code written by some random stranger? What if the code is not secure? Maybe the person who wrote it isn’t malicious, but instead just made a mistake. Nobody’s perfect. There are problems with copying code from dubious sources. It’s one thing to copy code from official documentation. For example, it should be okay to use code from the official PHP documentation website: https://www.php.net/docs.php
+
 Just be careful about the section that says “User Contributed Notes” because that’s not official.
+
 If you copy code from the Oracle API, it should be fine: https://docs.oracle.com/javase/8/docs/api/
+
 But make sure you’re looking up documentation for the correct version of Java.
+
 Vendor documentation and vendor code examples can be trusted, but user-posted content, such as on Stack Overflow or even the “User Contributed Notes” section on the PHP documentation site, can’t be trusted as much. 
 
-Port knocking – a way to open seemingly closed ports.
+**Port knocking** – a way to open seemingly closed ports.
 
-Ping sweep – a way of enumerating lots of things within a network. 
+**Ping sweep** – a way of enumerating lots of things within a network. 
 
-IP range scanning – instead of port scanning a single device, someone might scan an entire range of devices, such as many different servers in the cloud. Some people even scan every single IPv4 address. There are about 4.3 billion addresses, and as such, scanning them all takes a while. To scan all IPv4 addresses is called scanning the entire address space. Some people say port scanning is legal, but I’d say it’s best not to do it because you could potentially get in trouble for it. 
+**IP range scanning** – instead of port scanning a single device, someone might scan an entire range of devices, such as many different servers in the cloud. Some people even scan every single IPv4 address. There are about 4.3 billion addresses, and as such, scanning them all takes a while. To scan all IPv4 addresses is called scanning the entire address space. Some people say port scanning is legal, but I’d say it’s best not to do it because you could potentially get in trouble for it. 
 
 And even though 4.3 billion sounds like a lot, there are even more IPv6 addresses, to the point that it’s not practical to try and scan all of them. IP addresses are numeric and separated into four octets, such as 123.45.6.7, but IPv6 is hexadecimal, with bytes delimited by colons, such as d96:a874:61e7:751:744e:867f:5738:d170. 
 
-Covert channel – a less obvious way of exfiltrating data or communicating for nefarious purposes, such as for botnet command & control.
+**Covert channel** – a less obvious way of exfiltrating data or communicating for nefarious purposes, such as for botnet command & control.
 
-Insider threats – not all hackers are from far off places. Sometimes, a disgruntled employee will hack their own workplace. Maybe they got passed up for a promotion. Maybe they didn’t get a raise. Maybe their boss is mean to them. There are many reasons why an employee can become upset with their place of work. Maybe they just got fired but their remote work account hasn’t been deactivated yet. Maybe they’re a janitor. Maybe they’re in accounting. Maybe they’re the system administrator who has access to almost everything. 
+**Insider threats** – not all hackers are from far off places. Sometimes, a disgruntled employee will hack their own workplace. Maybe they got passed up for a promotion. Maybe they didn’t get a raise. Maybe their boss is mean to them. There are many reasons why an employee can become upset with their place of work. Maybe they just got fired but their remote work account hasn’t been deactivated yet. Maybe they’re a janitor. Maybe they’re in accounting. Maybe they’re the system administrator who has access to almost everything. 
 
 An employee who attacks their own company is called an insider threat. Because of this, corporate infrastructure can’t even trust employees. This is why things like data loss prevention software, logging, monitoring, the principle of least privilege, and network segmentation are important. 
 
-Similarly named packages – example: https://www.zdnet.com/article/two-malicious-python-libraries-removed-from-pypi/
+**Similarly named packages** – example: <https://www.zdnet.com/article/two-malicious-python-libraries-removed-from-pypi/>
+
 There might be a package in a package manager that you like, but there might also be another package with a similar name that is malicious. 
 
-Reputation hijacking – you trust your friend, but do you trust your friend’s accounts? Well, probably, you do. But if your friend’s account is compromised, then the attacker might send you a link or scam email, and you will be more likely to fall for it, because they’re pretending to be your friend.
+**Reputation hijacking** – you trust your friend, but do you trust your friend’s accounts? Well, probably, you do. But if your friend’s account is compromised, then the attacker might send you a link or scam email, and you will be more likely to fall for it, because they’re pretending to be your friend.
 
-Penetration testing a.k.a. pen testing – testing the security of something. A company might get a pen test from a security professional who will attempt to hack the company (but in a non-malicious way, just testing their security). There are certain regulatory compliance standards that require organizations to get pen tests.
+**Penetration testing a.k.a. pen testing** – testing the security of something. A company might get a pen test from a security professional who will attempt to hack the company (but in a non-malicious way, just testing their security). There are certain regulatory compliance standards that require organizations to get pen tests.
 
-Shoulder surfing – when someone watches you type in a password to try and see what it is. This might happen in a place such as a coffee shop, ATM, library, or even a workplace. Because someone can watch from behind and look over your shoulder, it’s called shoulder surfing.
+**Shoulder surfing** – when someone watches you type in a password to try and see what it is. This might happen in a place such as a coffee shop, ATM, library, or even a workplace. Because someone can watch from behind and look over your shoulder, it’s called shoulder surfing.
 
-Attacks against remote access software – remote access is very important for many things. It can be especially important for businesses and IT admins. Some examples of remote access software include Virtual Network Clients (VNCs), Remote Desktop Protocol (RDP), Secure Shell (SSH), TeamViewer, LogMeIn, and Chrome Remote Desktop. If you use remote access software, you need to make sure that you understand how to set it up securely, common mistakes people make, how to keep it updated, and making sure you use strong passwords.
+**Attacks against remote access software** – remote access is very important for many things. It can be especially important for businesses and IT admins. Some examples of remote access software include Virtual Network Clients (VNCs), Remote Desktop Protocol (RDP), Secure Shell (SSH), TeamViewer, LogMeIn, and Chrome Remote Desktop. If you use remote access software, you need to make sure that you understand how to set it up securely, common mistakes people make, how to keep it updated, and making sure you use strong passwords.
 
 Also, although there are many legitimate uses for remote desktop software, sometimes scammers or hackers will use them too. A scammer might tell someone to install TeamViewer on their computer and then let them control it. 
 
-Fork bombs – a program that recursively runs more instances of itself indefinitely. It goes from one program running, to two, then four, then eight, 16, 32, 64, 128… using up resources exponentially until the computer slows down and either crashes or just stops responding. 
+**Fork bombs** – a program that recursively runs more instances of itself indefinitely. It goes from one program running, to two, then four, then eight, 16, 32, 64, 128… using up resources exponentially until the computer slows down and either crashes or just stops responding. 
 
 Here is a widely-used example of a very compact fork bomb for Linux/Unix:
+
+```
 :(){ :|:& };:
+```
+
 But that’s hard to read. So here is another example of a bash fork bomb:
+
+```
 #!/bin/bash
 forkbomb() {
     forkbomb | forkbomb &
 };
 forkbomb
+```
 
 In the above example, it’s a shell script which first starts by defining a function. After the function is defined, it’s invoked. The function itself runs itself, and pipes the output of the function to the function again, using & to run it as a background process. 
 
@@ -132,43 +173,67 @@ Some people say that a fork bomb is a security issue, but if it requires authent
 But if someone’s only goal was to simply crash a server, what they could do to make it more effective would be to make a cron job that would run the fork bomb after the server starts up, which would lead to the server crashing over and over again, being unusable. 
 
 To make a cron job that runs when Linux starts up, you could use this command to edit your cron jobs:
+
+```
 sudo crontab -e
+```
+
 Then write this:
+
+```
 @reboot ~/forkbomb.sh
+```
+
 Then save and quit the editor.
 
 That being said, a hacker would probably prefer to create a cron job for something like a bind shell or reverse shell instead. That way, they could have persistent remote access to a machine.
 
+**Packet injection** – putting new packets into someone else’s network connection. It’s a type of man-in-the-middle attack
 
-Packet injection – putting new packets into someone else’s network connection. It’s a type of man-in-the-middle attack
-Format string attack – when user input gets evaluated by string-formatting functions, like printf(). In printf, you can use special placeholders (called type specifiers), like so:
+**Format string attack** – when user input gets evaluated by string-formatting functions, like printf(). In printf, you can use special placeholders (called type specifiers), like so:
+
+```
 printf("Hello, %s!", name);
+```
+
 printf() in languages like C or C++ allows you to use specifiers, like %s for string, %d for numeric (decimal) variables, etc.
+
 Basically, trusting user input without sanitizing and validating it, and then sending the user input to printf() can be dangerous. A format string attack can be used to do things like code execution or reading private things that are in RAM.
+
 You’ll notice that there are many kinds of attacks that are mostly for C and C++. This is because these are “unsafe” languages. The more memory-related stuff a language lets you do, the easier it is to write insecure code in it.
+
 People who use C or C++ might blame the developer, but the fact of the matter is that these languages make it far too easy to write unsafe code.
 
-Bitsquatting – typosquatting is when someone types the wrong domain name, like goggle.com instead of google.com because someone accidentally typed it wrong. Bitsquatting is a somewhat similar concept, but for memory corruption rather than human typos. An ASCII value stored in RAM is a sequence of 1s and 0s. If your program connects to example.com, the e in the string example.com is the following sequences of 1s and 0s: 01100101. But if there’s a problem with the RAM, one of the bits could change, and it could be something like this instead: 01100100. The last bit changed because of a memory error, which is rare but possible. Instead of being e, 01100100 is actually d. So instead of trying to connect to example.com, the program would try to go to dxample.com. This is called a bit error. 
+**Bitsquatting** – typosquatting is when someone types the wrong domain name, like goggle.com instead of google.com because someone accidentally typed it wrong. Bitsquatting is a somewhat similar concept, but for memory corruption rather than human typos. An ASCII value stored in RAM is a sequence of 1s and 0s. If your program connects to example.com, the e in the string example.com is the following sequences of 1s and 0s: 01100101. But if there’s a problem with the RAM, one of the bits could change, and it could be something like this instead: 01100100. The last bit changed because of a memory error, which is rare but possible. Instead of being e, 01100100 is actually d. So instead of trying to connect to example.com, the program would try to go to dxample.com. This is called a bit error. 
 
 Bitsquatting is when an attacker registers domain names that have characters that are one bit off of a legitimate domain. If someone wanted to do bitsquatting for google.com, they could use the domain foogle.com, because it’s one bit off. A bitsquatting domain will either steal data from a user, such as login information, or maybe give them malware. 
 
-Local admin password reuse – if a local admin password is reused across multiple workstations in the same organization, then getting the password from one workstation can mean being able to compromise many. Mimikatz can be used to get passwords from a machine once you have a shell on it, such as a reverse Meterpreter shell. 
+**Local admin password reuse** – if a local admin password is reused across multiple workstations in the same organization, then getting the password from one workstation can mean being able to compromise many. Mimikatz can be used to get passwords from a machine once you have a shell on it, such as a reverse Meterpreter shell. 
 
-Numeric overflow – when a numeric type variable (such as int or short) reaches its maximum value, and then gets incremented, it actually becomes a negative value. In a 32-bit signed int, it can go from being positive 2.1 billion to negative 2.1 billion. 
+**Numeric overflow** – when a numeric type variable (such as int or short) reaches its maximum value, and then gets incremented, it actually becomes a negative value. In a 32-bit signed int, it can go from being positive 2.1 billion to negative 2.1 billion. 
 
 Here are the exact values:
+
 What is 2147483647 + 1?
+
 In math, it would be 2147483648.
+
 But in computing, 2147483647 + 1 = -2147483648. It went from being the biggest 32-bit int to being the smallest. 
+
 2147483647 + 2 = -2147483647
+
 2147483647 + 3 = -2147483646
 
 2147483647 is the biggest signed 32-bit integer, and -2147483648 is the lowest. 
 
-Numeric underflow – the opposite of an overflow. A numeric underflow, such as an integer underflow, is when a super low negative number has its value decreased beyond the lowest negative value possible, and then it ends up becoming a huge positive number. 
+**Numeric underflow** – the opposite of an overflow. A numeric underflow, such as an integer underflow, is when a super low negative number has its value decreased beyond the lowest negative value possible, and then it ends up becoming a huge positive number. 
+
 -2147483648 - 1 = 2147483647… at least on a computer, in a situation where something is vulnerable to an underflow.
+
 -2147483648 - 2 = 2147483646
+
 -2147483648 - 3 = 2147483645
+
 This math seems silly, but it unfortunately makes sense on computers.
 
 The way to deal with numeric overflows and underflows is with bounds checking. Bounds checking means checking to make sure something is going to be an acceptable value. Instead of allowing something to wrap around from positive to negative or vice versa, you might want to throw an exception or just not accept the change.
@@ -177,7 +242,7 @@ Bounds checking for numeric overflows and underflows is referred to as range che
 
 Keep in mind that numeric overflows are not the same as things like buffer overflows.
 
-Buffer overflow – when you run a program, your program is allowed to edit its own memory, but not other stuff. A buffer overflow is when you’re able to write more than the length of what your program has, meaning it can then edit the memory of other programs. 
+**Buffer overflow** – when you run a program, your program is allowed to edit its own memory, but not other stuff. A buffer overflow is when you’re able to write more than the length of what your program has, meaning it can then edit the memory of other programs. 
 
 Here’s a very simple demonstration:
 Thing1 is yours. You’re allowed to change it. But thing2 is off-limits for you. They are both next to each other in RAM:
