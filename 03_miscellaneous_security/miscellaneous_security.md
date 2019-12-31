@@ -443,6 +443,7 @@ Additional topics to look up:
 - Memory corruption
 - Heap spraying
 - DLL injection createremotethread rtldecompressbuffer
+- HTTP request smuggling
 - Replay attacks
 - Certificate pinning
 - RASP -- Runtime Application Self-Protection
@@ -458,6 +459,7 @@ Additional topics to look up:
 - DNS hijacking
 - sybil attack against distributed systems
 - form grabbing
+- server-side javascript injection (against node.js)
 - driver shim
 - iterator invalidation
 - Update spoofing, i.e. flame
