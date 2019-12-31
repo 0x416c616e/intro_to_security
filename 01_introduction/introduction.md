@@ -7,42 +7,79 @@ Some people work exclusively in security. Other people are primarily software de
 ## Clearing up some common misconceptions
 
 Can a website be malicious? Yes.
+
 Can JavaScript be malicious? Yes.
+
 Can email attachments be malicious? Yes.
+
 Can a word document be malicious? Yes.
+
 Can a PDF be malicious? Yes.
+
 Is hacking illegal? Yes.
+
 Is it legal to attempt to hack a server because “I’m just testing the security”? No.
+
 Do laws against hacking stop people from doing it? No.
+
 Is a security researcher the same thing as a malicious hacker? No.
+
 Can clicking a link get you hacked? Yes.
+
 Can users of your site hack you by submitting comments, forms, or uploading files? Yes.
+
 Can someone hack your site even if you yourself can’t figure out how it’s hackable? Yes.
+
 Can something get hacked even with no user interaction? Yes.
+
 Is there malware for Linux? Yes.
+
 Does restarting a computer get rid of malware? No, except in some very rare cases of non-persistent malware, but that’s the exception, not the rule.
+
 If I went to a malicious website but then closed it quickly, does that mean I’m safe? No.
+
 Does all hacking involve zero-day exploits? No.
+
 Do most hackers take the path of least resistance and try easy stuff first? Yes.
+
 Are executable files (such as .exes) the only kind of malicious files? No.
+
 Are Linux and macOS infallible when it comes to security? No.
+
 Does someone need to be a super genius in order to hack? No.
+
 Is antivirus software perfect? No.
+
 Is antivirus software worth using? Yes.
+
 Do people make money from hacking? Yes.
+
 Is malware only a problem for Windows? No.
+
 If I make a website, will people attempt to hack it? Yes.
+
 Are all hacks done manually, like there’s an actual person attempting it? No.
+
 If I install this one thing, will it make me unhackable? No.
+
 If I set up this one security box on my network, will it make my network 100% secure? No.
+
 Is there such a thing as perfect security? No.
+
 Can software run on a computer even without a window? Yes.
+
 Can phones have security problems? Yes.
+
 Will people only hack me if they know me personally? No.
+
 Will all hacked websites say “this site was hacked” (a phenomenon called web defacement)? No.
+
 Will security always be a problem? Yes.
+
 Is security ever “done”? No.
+
 If I’m a web developer, can I just ignore security because “I’m not a security person”? No!!!
+
 If someone is a security researcher, should I ask them “hey, can you hack my friend’s Facebook?” No!!!
 
 ## Vulnerabilities and exploits
