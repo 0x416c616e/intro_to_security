@@ -432,3 +432,40 @@ Go to the previous section:
 
 Go to the next section:
 <https://github.com/0x416c616e/intro_to_security/blob/master/04_tools/tools.md>
+
+Some additional stuff you might want to look into:
+
+Additional topics to look up:
+
+-ROP -- return-oriented programming
+-Use-after-free and double free
+-nop slide
+-Memory corruption
+-Heap spraying
+-DLL injection createremotethread rtldecompressbuffer
+-Replay attacks
+-Certificate pinning
+-RASP -- Runtime Application Self-Protection
+-credentialed vs. non-credentialed scans
+-Hacker convention/conference -- blackhat and defcon
+-stack canaries
+-stack canary brute forcing
+-password spraying
+-packet-in-packet
+-dns cache poisoning
+-dns sinkholing
+-dns rebinding
+-DNS hijacking
+-sybil attack against distributed systems
+-form grabbing
+-driver shim
+-iterator invalidation
+-Update spoofing, i.e. flame
+-Insecure Direct Object Reference
+-Session hijacking
+-Server-side request forgery (SSRF)
+-broken access control
+-broken authentication
+-Same origin policy
+-same-origin bypass
+-Cross-origin resource sharing (CORS)
