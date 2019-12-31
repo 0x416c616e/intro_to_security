@@ -1,4 +1,4 @@
-# Web Security Concepts
+# Section 2: Web Security Concepts
 
 ## Web defacement
 An unskilled attacker might find a way to modify a web page, and then edit it to say “[username] was here.” Maybe they’ll change it to have green text on a black background, and maybe include an edgy picture of a skull, Guy Fawkes mask, or someone wearing a mask at a computer. That’s called web defacement. A similar concept is someone recovering someone’s account on social media and then using it to post a message saying “hacked by [name].” Although it might seem scary to people who don’t know about security, web defacement is relatively tame. An actually concerning hack would be someone exfiltrating in such a way that they never get caught, rather than trying to immediately announce to the world that they found a security issue on a site or with someone’s account. People who do web defacement are usually young, unskilled, and just looking for attention. By contrast, a serious hacker doesn’t want any attention at all.
