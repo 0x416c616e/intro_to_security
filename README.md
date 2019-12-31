@@ -1,6 +1,7 @@
 # Introduction to Information Security
 
-This is a short book about information security. It includes information on web security, miscellaneous security, cybercrime, and malware.
+This is a short book about information security. It includes information on web security, miscellaneous security, security tools, cybercrime, malware, and well-known security vulnerabilities.
+
 
 Start reading it here:
 
