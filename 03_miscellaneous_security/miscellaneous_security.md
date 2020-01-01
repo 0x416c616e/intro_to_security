@@ -294,7 +294,7 @@ If you use disk encryption, make sure you won’t forget the decryption key! I o
 
 **Evil twin access point** – when you connect to a wireless network, do you know that it’s legitimate? Just because you go to a coffee shop and see a wifi network called “coffee shop wifi” doesn’t mean that’s the real one. Something an attacker can do is set up their own wifi network that is meant to look like a legitimate one. You might be able to connect to it and use the internet, but the attacker might be capturing all the packets on the network so they can try and find valuable information in it. 
 
-**MAC address spoofing** –  some networks use MAC address filtering, meaning only devices with certain MAC addresses can use it. A MAC address is a unique 48-bit address, meaning there are 248 total addresses. No two devices are supposed to have the same MAC address. So if an attacker wanted to get on a network with MAC address filtering, they would have a 1 in 281 trillion change of guessing a particular MAC address. However, an attacker might not need to guess if they can just find out the MAC address of approved devices, such as if there is a device with the MAC address listed on it.
+**MAC address spoofing** –  some networks use MAC address filtering, meaning only devices with certain MAC addresses can use it. A MAC address is a unique 48-bit address, meaning there are 2^48 total addresses. No two devices are supposed to have the same MAC address. So if an attacker wanted to get on a network with MAC address filtering, they would have a 1 in 281 trillion change of guessing a particular MAC address. However, an attacker might not need to guess if they can just find out the MAC address of approved devices, such as if there is a device with the MAC address listed on it.
 
 A device’s IP address can change pretty often, but its MAC address never changes, unless someone specifically uses software to spoof it. 
 
@@ -336,7 +336,7 @@ A CAM table will show which MAC address is on each port.
 Here is a simplified example:
 
 ```
-MAC			Port
+Port
 A:B:C		1
 A:A:A		4
 B:B:B		3
