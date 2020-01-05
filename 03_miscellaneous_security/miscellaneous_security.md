@@ -286,6 +286,12 @@ A login password alone is not the same thing. You can use password recovery soft
 
 If you use disk encryption, make sure you won’t forget the decryption key! I once used disk encryption on a laptop and then forgot the password. I was unable to recover any of the data on it. It could be good to use it with a password manager. If you don’t trust cloud-based ones, you can always use an offline password manager on another device. But of course, you’d still have to remember the password manager’s master password.
 
+I made a file encryption/decryption tool in Java, which you can check out here:
+
+https://github.com/0x416c616e/ezcrypt
+
+But keep in mind that it's only for file encryption, not FDE.
+
 **Widespread use of encryption** – encryption didn’t used to be as widely used as it is now. And many years ago, if you mentioned encryption, someone might say “well I have nothing to hide, so I don’t need it.” Or they might say “it seems like too much effort to set up.” But now, it’s built into a lot of technology. All major OSes support encryption. When you go to a website, it’s using encryption to securely connect you to the site. When you use an app, it’s using encryption for communicating with the cloud. You can encrypt your phone. You can encrypt your laptop. Every now and then, you will encounter a website where it only uses HTTP instead of HTTPS. But this is getting less common each and every day.
 
 **IMSI catching** – cell tower spoofing. Instead of connecting to a legitimate carrier’s cell tower, like for AT&T, T-Mobile, or Vodafone, your phone could be connecting to a malicious fake device pretending to be a real cell tower. IMSI catchers are illegal for the average person to use, but law enforcement in some countries use them. For example, the FBI uses devices called “Stingrays,” which are IMSI catchers. If you ever go to a security event, such as a hacker convention like Defcon, you might encounter an IMSI catcher.
